@@ -1,13 +1,28 @@
-var akanName= "d"
-var gender = parseInt (prompt("What is your gender? Male or Female?"));
-var DD= parseInt (prompt ("Enter the day date of birth xx"));
-var MM= parseInt (prompt ("Enter month digits of the year you were born xx"));
-var CC= parseInt (prompt ("Enter century digits of the year you were born xx98"));
-var YY= parseInt (prompt ("Enter year digits of the year you were born 19xx"));
 
-function akanName(){
-    return ((d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7)
+
+
+function akanName(DD,MM,CC,YY){
+    var gender = prompt("What is your gender? Male or Female?");
+    var DD= parseInt (prompt ("Enter the day date of birth xx"));
+    var MM= parseInt (prompt ("Enter month digits of the year you were born xx"));
+    var CC= parseInt (prompt ("Enter century digits of the year you were born xx98"));
+    var YY= parseInt (prompt ("Enter year digits of the year you were born 19xx"));
+
+    return ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % (7);
+   
+
+
 }
+
+
+akanName ();
+
+
+
+
+
+
+
     if (gender === male && d === 2){ 
         console.log ("kwadwo");
     } else if (gender === male && d === 3 ){
