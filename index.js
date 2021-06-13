@@ -1,9 +1,9 @@
 var akanName= "d"
-var gender = prompt ("What is you gender? Male or Female?")
-var DD= prompt("Enter the day date of birth xx");
-var MM= prompt ("Enter month digits of the year you were born xx");
-var CC= prompt("Enter century digits of the year you were born xx98");
-var YY= prompt ("Enter year digits of the year you were born 19xx");
+var gender = parseInt (prompt("What is your gender? Male or Female?"));
+var DD= parseInt (prompt ("Enter the day date of birth xx"));
+var MM= parseInt (prompt ("Enter month digits of the year you were born xx"));
+var CC= parseInt (prompt ("Enter century digits of the year you were born xx98"));
+var YY= parseInt (prompt ("Enter year digits of the year you were born 19xx"));
 
 function akanName(){
     return ((d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7)
@@ -20,7 +20,7 @@ function akanName(){
         console.log ("kofi");
     } else if (gender === male && d === 7){
         console.log ("kwame");
-    } else (gender === male && d === 1 ){
+    } else (gender === male && d === 1 );{
         console.log ("kwasi");
     } 
 if (gender === female && d === 2){ 
