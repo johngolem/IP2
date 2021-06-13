@@ -1,14 +1,13 @@
+var akanName=d
+var gender = prompt ("What is you gender? Male or Female?")
+var dd= prompt("Enter the day date of birth xx");
+var mm= prompt ("Enter month digits of the year you were born xx");
+var cc= prompt("Enter century digits of the year you were born xx98");
+var yy= prompt ("Enter year digits of the year you were born");
+
 function akanName(){
-    return ((d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7)
-    
-    var gender = prompt ("What is you gender? Male or Female?")
-    var dd= prompt("Enter the day date of birth xx");
-    var mm= prompt ("Enter month digits of the year you were born xx");
-    var cc= prompt("Enter century digits of the year you were born xx98");
-    var yy= prompt ("Enter year digits of the year you were born");
-    
-    
-    }
+    return ((d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7)
+}
     if (gender === male && d === monday){ 
         console.log ("kwadwo")
     } else if (gender === male && d === tuesday ){
