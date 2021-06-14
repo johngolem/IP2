@@ -1,0 +1,31 @@
+//     if (gender === male && DOB <=0) {
+    console.log ("kwasi");
+} else if (gender === male && DOB <=1){ 
+    alert ("kwadwo");
+} else if (gender === male && DOB === 3 ){
+    alert ("kwabena");
+}  else if (gender === male && DOB=== 4 ){
+    console.log ("kwaku");
+} else if (gender === male && DOB===5 ){
+    console.log ("yaw");
+} else if (gender === male && DOB=== 6){
+    console.log ("kofi");
+} else (gender === male && DOB=== 7){
+    console.log ("kwame");
+
+} 
+if (gender === female && DOB === 2){ 
+console.log ("adwoa");
+} else if (gender === female && DOB=== 3 ){
+console.log ("abenaa");
+}  else if (gender === female && DOB === 4 ){
+console.log ("akua");
+} else if (gender === female && DOB===5 ){
+console.log ("yaa");
+} else if (gender === female && DOB === 6){
+console.log ("afua");
+} else if (gender === female && DOB === 7){
+console.log ("ama");
+} else (gender === female && DOB === 1 );{
+console.log ("akosua");
+} 

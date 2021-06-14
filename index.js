@@ -11,34 +11,34 @@ function DOB(CC,YY,MM,DD){
     return ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % (7);
 }
 
-     if (gender === male && DOB <=0) {
-        console.log ("kwasi");
-    } else if (gender === male && DOB <=1){ 
-        alert ("kwadwo");
-    } else if (gender === male && DOB === 3 ){
-        alert ("kwabena");
-    }  else if (gender === male && DOB=== 4 ){
-        console.log ("kwaku");
-    } else if (gender === male && DOB===5 ){
-        console.log ("yaw");
-    } else if (gender === male && DOB=== 6){
-        console.log ("kofi");
-    } else (gender === male && DOB=== 7){
-        console.log ("kwame");
+if (gender === male && DOB <=0) {
+    console.log ("kwasi");
+} else if (gender === male && ( % (DOB) <0)){ 
+    alert ("kwadwo");
+} else if (gender === male && DOB === 3 ){
+    alert ("kwabena");
+}  else if (gender === male && DOB=== 4 ){
+    console.log ("kwaku");
+} else if (gender === male && DOB===5 ){
+    console.log ("yaw");
+} else if (gender === male && DOB=== 6){
+    console.log ("kofi");
+} else (gender === male && DOB=== 7){
+    console.log ("kwame");
 
-    } 
+} 
 if (gender === female && DOB === 2){ 
-    console.log ("adwoa");
+console.log ("adwoa");
 } else if (gender === female && DOB=== 3 ){
-    console.log ("abenaa");
+console.log ("abenaa");
 }  else if (gender === female && DOB === 4 ){
-    console.log ("akua");
+console.log ("akua");
 } else if (gender === female && DOB===5 ){
-    console.log ("yaa");
+console.log ("yaa");
 } else if (gender === female && DOB === 6){
-    console.log ("afua");
+console.log ("afua");
 } else if (gender === female && DOB === 7){
-    console.log ("ama");
+console.log ("ama");
 } else (gender === female && DOB === 1 );{
-    console.log ("akosua");
+console.log ("akosua");
 } 
