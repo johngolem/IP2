@@ -1,5 +1,6 @@
 body{
     background-color: bisque;
+    background-image: <img src="./images/cake.jpg" alt="Image of a cake" />;
 }
 title{
 color: darkgray;
