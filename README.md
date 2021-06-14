@@ -2,10 +2,11 @@
 #### {this is the README file for week two  IP.}, {11th July 2021}
 #### By **{JOHN PAUL}**
 ## Description
-{The Akhan name generator takes input from the user
-the input contains the Date of birth details
-it uses the input to calculate the exact day of the week they were born and gives them the output in terms of their Akhan name.
-    the website has the details on what every Akhan name means and represents.
+{The Akhan name generator}
+The generator takes input from the user through prompts.
+The input contains the date of birth details, i.e, the day, month and year of birth.
+It then uses the input to calculate the exact day of the week they were born and gives them the output in terms of their Akhan name.
+    The website has the details on what every Akhan name means and represents.
  }
 ## Known Bugs
 . 
