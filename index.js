@@ -1,46 +1,87 @@
-
-
-   var gender = prompt("Choose your gender? Male or Female?");
-function DOB(CC,YY,MM,DD){
-    var birthday = document.getElementById(birthday). value;
-    var DD= parseInt (prompt ("Enter the day date of birth xx"));
-    var month = document.getElementById(month).value;
-    var MM= parseInt (prompt ("Enter month digits of when you were born xx"));
-    var century = document.getElementById(century). value;
-    var CC= parseInt (prompt ("Enter century digits of the year you were born xx98"));
-    var year = document.getElementById(year). value;
-    var YY= parseInt (prompt ("Enter year digits of the year you were born 19xx"));
-    //return var results= ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % (7);
-}
-
-if (gender === male && DOB <=0) {
-    console.log ("kwasi");
-} else if (gender === male && ( % (DOB) <0)){ 
-    alert ("kwadwo");
-} else if (gender === male && DOB === 3 ){
-    alert ("kwabena");
-}  else if (gender === male && DOB=== 4 ){
-    console.log ("kwaku");
-} else if (gender === male && DOB===5 ){
-    console.log ("yaw");
-} else if (gender === male && DOB=== 6){
-    console.log ("kofi");
-} else (gender === male && DOB=== 7){
-    console.log ("kwame");
-
-} 
-if (gender === female && DOB === 2){ 
-console.log ("adwoa");
-} else if (gender === female && DOB=== 3 ){
-console.log ("abenaa");
-}  else if (gender === female && DOB === 4 ){
-console.log ("akua");
-} else if (gender === female && DOB===5 ){
-console.log ("yaa");
-} else if (gender === female && DOB === 6){
-console.log ("afua");
-} else if (gender === female && DOB === 7){
-console.log ("ama");
-} else (gender === female && DOB === 1 );{
-console.log ("akosua");
-} 
+// The names listed below are ordered by days from Sunday
+const maleAkanNames = [
+    "Kwame",
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi"
+  ];
+  const femaleAkanNames = [
+    "Ama",
+    "Akosua",
+    "Adwoa",
+    "Abenaa",
+    "Akua",
+    "Yaa",
+    "Afua"
+  ];
+  
+  // This function collects the data from input fields
+  function fetchFormData() {
+    let form = document.forms[0];
+    let day, month, year, gender;
+  
+    gender = form.gender.value;
+  
+    day = parseInt(form.day.value);
+    month = parseInt(form.month.value);
+    year = parseInt(form.year.value);
+  
+    return [gender, day, month, year];
+  }
+  /**
+   * Initialize calcWeekDay function.
+   * The function calculates the day of the week from a specific date.
+   */
+  function calculateWeekDay(birthDate) {
+    let [dayOfMonth, monthOfYear, yearOfBirth] = birthDate;
+    let zeroBasedCentury, yearOfCentury;
+  
+    // Count Jan & Feb  as months 13 and 14 of the previous year.
+    if (monthOfYear <= 2) {
+      monthOfYear += 12;
+      yearOfBirth -= 1;
+    }
+  
+    // Split year to centuryCode & yearCode
+    zeroBasedCentury = parseInt(yearOfBirth / 100);
+    yearOfCentury = yearOfBirth % 100;
+  
+    let dayOfWeek =
+      (dayOfMonth +
+        parseInt(
+          2.6 * (monthOfYear + 1) +
+            yearOfCentury +
+            parseInt(yearOfCentury / 4) +
+            parseInt(zeroBasedCentury / 4) +
+            5 * zeroBasedCentury
+        )) %
+      7;
+  
+    // return dayOfWeek as a zero-based index
+    // dayOfWeek = (0 = Saturday, 1 = Sunday, 2 = Monday, ..., 6 = Friday)
+    return dayOfWeek;
+  }
+  
+  /**
+   * Initialize deriveAkanName function.
+   * The function calls the calcWeekDay function and derives the user gender
+   * from the Akan Name arrays defined at the top
+   */
+  function deriveAkanName() {
+    let formData = fetchFormData();
+    let userBirthDate, userGender, dayOfWeek;
+  
+    [userGender, ...userBirthDate] = formData;
+    dayOfWeek = calculateWeekDay(userBirthDate);
+  
+    if (userGender === "Male") {
+      alert("Your Akan Name is: " + maleAkanNames[dayOfWeek]);
+    } else {
+      alert("Your Akan Name is: " + femaleAkanNames[dayOfWeek]);
+    }
+    // Helps clear the input fields after retrieving the values
+    return false;
+  }
