@@ -1,14 +1,16 @@
 
 
-   var gender = prompt("What is your gender? Male or Female?");
+   var gender = prompt("Choose your gender? Male or Female?");
 function DOB(CC,YY,MM,DD){
- 
+    var birthday = document.getElementById(birthday). value;
     var DD= parseInt (prompt ("Enter the day date of birth xx"));
+    var month = document.getElementById(month).value;
     var MM= parseInt (prompt ("Enter month digits of when you were born xx"));
+    var century = document.getElementById(century). value;
     var CC= parseInt (prompt ("Enter century digits of the year you were born xx98"));
+    var year = document.getElementById(year). value;
     var YY= parseInt (prompt ("Enter year digits of the year you were born 19xx"));
-
-    return ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % (7);
+    //return var results= ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % (7);
 }
 
 if (gender === male && DOB <=0) {
